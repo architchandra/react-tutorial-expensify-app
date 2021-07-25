@@ -10,10 +10,15 @@ const ExpenseDashboardPage = () => (
   <h1>Expense Dashboard Page</h1>
 );
 
+const AddExpensePage = () => (
+  <h1>Add an Expense</h1>
+);
+
 const routes = (
   <BrowserRouter>
     <div>
-      <Route path="/" component={ ExpenseDashboardPage } />
+      <Route path="/" component={ ExpenseDashboardPage } exact={ true } />
+      <Route path="/create" component={ AddExpensePage } exact={ true } />
     </div>
   </BrowserRouter>
 );
