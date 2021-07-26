@@ -29,15 +29,38 @@ const NotFoundPage = () => (
   </div>
 );
 
+const Header = () => (
+  <header>
+    <h1>Expensify</h1>
+    <ul>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/create">Create</Link>
+      </li>
+      <li>
+        <Link to="/edit">Edit</Link>
+      </li>
+      <li>
+        <Link to="/help">Help</Link>
+      </li>
+    </ul>
+  </header>
+);
+
 const routes = (
   <BrowserRouter>
-    <Switch>
-      <Route path="/" component={ ExpenseDashboardPage } exact={ true } />
-      <Route path="/create" component={ AddExpensePage } />
-      <Route path="/edit" component={ EditExpensePage } />
-      <Route path="/help" component={ HelpPage } />
-      <Route component={ NotFoundPage } />
-    </Switch>
+    <div>
+      <Header />
+      <Switch>
+        <Route path="/" component={ ExpenseDashboardPage } exact={ true } />
+        <Route path="/create" component={ AddExpensePage } />
+        <Route path="/edit" component={ EditExpensePage } />
+        <Route path="/help" component={ HelpPage } />
+        <Route component={ NotFoundPage } />
+      </Switch>
+    </div>
   </BrowserRouter>
 );
 ReactDOM.render(routes, document.getElementById('app'));
