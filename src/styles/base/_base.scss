@@ -14,3 +14,7 @@ button {
 button:disabled {
   cursor: default;
 }
+
+.navitem-active {
+  font-weight: bold;
+}

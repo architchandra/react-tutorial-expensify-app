@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
@@ -34,16 +34,16 @@ const Header = () => (
     <h1>Expensify</h1>
     <ul>
       <li>
-        <Link to="/">Dashboard</Link>
+        <NavLink to="/" activeClassName="navitem-active" exact={ true }>Dashboard</NavLink>
       </li>
       <li>
-        <Link to="/create">Create</Link>
+        <NavLink to="/create" activeClassName="navitem-active">Create</NavLink>
       </li>
       <li>
-        <Link to="/edit">Edit</Link>
+        <NavLink to="/edit" activeClassName="navitem-active">Edit</NavLink>
       </li>
       <li>
-        <Link to="/help">Help</Link>
+        <NavLink to="/help" activeClassName="navitem-active">Help</NavLink>
       </li>
     </ul>
   </header>
