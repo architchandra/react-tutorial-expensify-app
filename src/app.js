@@ -25,7 +25,7 @@ const HelpPage = () => (
 const NotFoundPage = () => (
   <div>
     <h2>Page not found</h2>
-    <p>Go to - <Link to="/">Home Page</Link></p>
+    <p>Go to the <Link to="/">dashboard</Link>.</p>
   </div>
 );
 
@@ -34,7 +34,7 @@ const Header = () => (
     <h1>Expensify</h1>
     <ul>
       <li>
-        <Link to="/">Home</Link>
+        <Link to="/">Dashboard</Link>
       </li>
       <li>
         <Link to="/create">Create</Link>
