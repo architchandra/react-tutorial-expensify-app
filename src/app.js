@@ -7,24 +7,24 @@ import './styles/styles.scss';
 
 
 const ExpenseDashboardPage = () => (
-  <h1>Expense Dashboard Page</h1>
+  <h2>Expense Dashboard Page</h2>
 );
 
 const AddExpensePage = () => (
-  <h1>Add an Expense</h1>
+  <h2>Add an Expense</h2>
 );
 
 const EditExpensePage = () => (
-  <h1>Edit an Expense</h1>
+  <h2>Edit an Expense</h2>
 );
 
 const HelpPage = () => (
-  <h1>Help</h1>
+  <h2>Help</h2>
 );
 
 const NotFoundPage = () => (
   <div>
-    <h1>Page not found</h1>
+    <h2>Page not found</h2>
     <p>Go to - <Link to="/">Home Page</Link></p>
   </div>
 );
