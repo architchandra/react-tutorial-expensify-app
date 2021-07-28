@@ -11,7 +11,7 @@
 
 
 
-const item = ['Coffee', 'INR 20', 'INR 30', 'INR 40'];
-const [itemName, , priceMedium] = item;
+const item = ['Coffee', 'INR 20', , 'INR 40'];
+const [itemName, , priceMedium = 'INR 50'] = item;
 
 console.log(`A medium ${itemName} costs ${priceMedium}.`);
