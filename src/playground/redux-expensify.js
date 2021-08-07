@@ -134,6 +134,14 @@ const getExpenses = (expenses = [], { text, sortBy, startDate, endDate } = {}) =
       const hasEndDateMatch = typeof endDate !== 'number' || expense.createdAt <= endDate;
 
       return hasTextFilterMatch && hasStartDateMatch && hasEndDateMatch;
+    })
+    .sort((expense1, expense2) => {
+      if(sortBy === 'date') {
+        return expense1.createdAt < expense2.createdAt ? 1 : -1;
+      }
+      else if(sortBy === 'amount') {
+        return expense1.amount < expense2.amount ? 1 : -1;
+      }
     });
   }
 };
@@ -158,10 +166,11 @@ const expenseTwo = store.dispatch(addExpense({ description: 'Coffee', amount: 30
 // store.dispatch(setTextFilter('rent'));
 // store.dispatch(sortByAmount());
 // store.dispatch(sortByDate());
-store.dispatch(setStartDate(-2000));
-store.dispatch(setEndDate(200));
-store.dispatch(setTextFilter('coff'));
+// store.dispatch(setStartDate(-2000));
+// store.dispatch(setEndDate(200));
+// store.dispatch(setTextFilter('coff'));
 // store.dispatch(setStartDate());
+store.dispatch(sortByAmount());
 
 
 
