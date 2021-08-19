@@ -19,4 +19,4 @@ const sortByDate = () => ({
 
 
 
-export { setTextFilter, setStartDate, setEndDate, sortByAmount };
+export { setTextFilter, setStartDate, setEndDate, sortByAmount, sortByDate };

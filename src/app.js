@@ -19,11 +19,8 @@ store.subscribe(() => {
 });
 
 store.dispatch(addExpense({ description: 'Electricity bill', amount: 1500 }));
-store.dispatch(addExpense({ description: 'Broadband bill', amount: 943 }));
+store.dispatch(addExpense({ description: 'Broadband bill', amount: 943, createdAt: 1000 }));
 store.dispatch(addExpense({ description: 'Maid\'s salary', amount: 8000 }));
-setTimeout(() => {
-  store.dispatch(setTextFilter('bill'));
-}, 3000);
 
 
 
