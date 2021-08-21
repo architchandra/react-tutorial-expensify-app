@@ -12,6 +12,7 @@ class ExpenseForm extends React.Component {
     note: '',
     createdAt: moment(),
     calendarFocused: false,
+    error: '',
   }
 
   onDescriptionChange = (e) => {
@@ -36,11 +37,30 @@ class ExpenseForm extends React.Component {
   onFocusChange = ({ focused }) => {
     this.setState(() => ({ calendarFocused: focused }));
   };
+  onSubmit = (e) => {
+    e.preventDefault();
+
+    if(!this.state.description || !this.state.amount) {
+      this.setState(() => ({ error: 'Please fill up the description and amount fields!' }));
+    } else {
+      if(this.state.error !== '') {
+        this.setState(() => ({ error: '' }));
+      }
+
+      this.props.onSubmit({
+        description: this.state.description,
+        amount: parseFloat(this.state.amount, 10),
+        createAt: (this.state.createdAt).valueOf(),
+        note: this.state.note,
+      });
+    }
+  };
 
   render() {
     return (
       <div>
-        <form>
+        {this.state.error && <p>{this.state.error}</p>}
+        <form onSubmit={this.onSubmit}>
           <input
             type="text"
             value={this.state.description}
@@ -68,6 +88,7 @@ class ExpenseForm extends React.Component {
             onChange={this.onNoteChange}
             rows="4"
           ></textarea>
+          <input type="submit" value="Submit" />
         </form>
       </div>
     );
