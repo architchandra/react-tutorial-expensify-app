@@ -16,7 +16,6 @@ const store = configureStore();
 store.subscribe(() => {
   const state = store.getState();
   const expenses = getExpenses(state.expenses, state.filters);
-  console.log(expenses);
 });
 
 store.dispatch(addExpense({ description: 'Electricity bill', amount: 1500, createdAt: moment().valueOf() }));
