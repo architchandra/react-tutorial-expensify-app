@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render an individual expense 1`] = `
+<li>
+  <Link
+    replace={false}
+    to="/edit/1"
+  >
+    <p>
+      Description: 
+      Order pizza
+    </p>
+  </Link>
+  <p>
+    Amount: 
+    195
+  </p>
+</li>
+`;
