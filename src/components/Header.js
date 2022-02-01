@@ -13,9 +13,6 @@ const Header = () => (
       <li>
         <NavLink to="/create" activeClassName="navitem-active">Create</NavLink>
       </li>
-      <li>
-        <NavLink to="/help" activeClassName="navitem-active">Help</NavLink>
-      </li>
     </ul>
   </header>
 );
