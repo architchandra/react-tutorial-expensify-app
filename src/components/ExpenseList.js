@@ -9,9 +9,9 @@ const ExpenseList = (props) => (
   <div>
     <ul>
       {
-        props.expenses.length !== 0
-          ? props.expenses.map((expense, index) => <ExpenseListItem key={expense.id} {...expense} />)
-          : <p>No expenses found.</p>
+        props.expenses === undefined || props.expenses.length === 0
+          ? <p>No expenses found.</p>
+          : props.expenses.map((expense, index) => <ExpenseListItem key={expense.id} {...expense} />)
       }
     </ul>
   </div>
