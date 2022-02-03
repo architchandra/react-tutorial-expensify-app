@@ -35,6 +35,5 @@ test('should edit expense correctly', () => {
 test('should remove expense correctly', () => {
   const testExpenseId = expenses[0].id;
   wrapper.find('button').simulate('click');
-  wrapper.find('button').prop('onClick')();
   expect(removeExpenseSpy).toHaveBeenLastCalledWith(testExpenseId);
 });
