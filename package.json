@@ -45,6 +45,10 @@
     "heroku-postbuild": "yarn run build:prod"
   },
   "name": "expensify-app",
+  "engines": {
+    "node": "12.x",
+    "yarn": "1.x"
+  },
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
