@@ -11,7 +11,7 @@ const ExpenseListItem = ({id, description, note, amount, createdAt}) => {
       {description && <p>Description: {description}</p>}
     </Link>
     {amount && <p>Amount: {amount}</p>}
-    {!!(createdAt) && <p>Created at: {moment(createdAt).format('Do MMMM YYYY, h:mm a')}</p>}
+    {(createdAt !== null && (typeof createdAt !== 'undefined')) && <p>Created at: {moment(createdAt).format('Do MMMM YYYY')}</p>}
   </li>
 )};
 export default ExpenseListItem;
