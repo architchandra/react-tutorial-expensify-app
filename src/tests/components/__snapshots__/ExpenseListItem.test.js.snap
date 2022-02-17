@@ -13,7 +13,7 @@ exports[`should render an individual expense 1`] = `
   </Link>
   <p>
     Amount: 
-    195
+    $195.00
   </p>
   <p>
     Created at: 
