@@ -2,14 +2,23 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseListItem from './ExpenseListItem.js';
 import getExpenses from '../selectors/expenses.js';
+import getExpensesTotal from '../selectors/expenses-total.js';
 
 
 
 const ExpenseList = (props) => (
   <div>
+    <p>
+      {props.expenses.length} expenses found
+      {
+        props.expenses.length === 0
+          ? '.'
+          : ', totalling to $' + getExpensesTotal(props.expenses) + '.'
+      }
+    </p>
     <ul>
       {
-        props.expenses === undefined || props.expenses.length === 0
+        props.expenses.length === 0
           ? <p>No expenses found.</p>
           : props.expenses.map((expense, index) => <ExpenseListItem key={expense.id} {...expense} />)
       }
