@@ -8,14 +8,6 @@ import getExpensesTotal from '../selectors/expenses-total.js';
 
 const ExpenseList = (props) => (
   <div>
-    <p>
-      {props.expenses.length} expenses found
-      {
-        props.expenses.length === 0
-          ? '.'
-          : ', totalling to $' + getExpensesTotal(props.expenses) + '.'
-      }
-    </p>
     <ul>
       {
         props.expenses.length === 0

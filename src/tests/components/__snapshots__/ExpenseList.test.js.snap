@@ -2,11 +2,6 @@
 
 exports[`should render Expense List with expenses 1`] = `
 <div>
-  <p>
-    3
-     expenses found
-    , totalling to $520.
-  </p>
   <ul>
     <ExpenseListItem
       amount={195}
@@ -38,11 +33,6 @@ exports[`should render Expense List with expenses 1`] = `
 
 exports[`should render Expense List without any expenses 1`] = `
 <div>
-  <p>
-    0
-     expenses found
-    .
-  </p>
   <ul>
     <p>
       No expenses found.
