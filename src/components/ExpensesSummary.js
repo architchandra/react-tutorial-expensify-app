@@ -24,4 +24,5 @@ const mapStateToProps = (state) => ({
 
 
 
+export { ExpensesSummary };
 export default connect(mapStateToProps)(ExpensesSummary);

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should NOT render if no expenses present 1`] = `""`;
+
+exports[`should render plural copy when multiple expenses present 1`] = `
+<p>
+  3 expenses
+   found, totalling 
+  $520.00
+  .
+</p>
+`;
+
+exports[`should render singular copy when ONLY one expense present 1`] = `
+<p>
+  1 expense
+   found, totalling 
+  $195.00
+  .
+</p>
+`;
