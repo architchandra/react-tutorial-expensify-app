@@ -9,7 +9,7 @@ console.log('before');
 
 promise.then((data) => {
   console.log(data);
-}, (error) => {
+}).catch((error) => {
   console.log('error:', error);
 });
 
