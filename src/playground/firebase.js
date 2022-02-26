@@ -67,3 +67,49 @@
 //   'job/company': 'Amazon',
 //   'location/city': 'Bangalore',
 // });
+
+
+
+// Read data once
+
+// get(ref(database))
+//   .then((snapshot) => {
+//     console.log(snapshot.val());
+//   })
+//   .catch((e) => {
+//     console.log(e);
+//   });
+
+//   get(ref(database, 'location/city'))
+//   .then((snapshot) => {
+//     console.log(snapshot.val());
+//   })
+//   .catch((e) => {
+//     console.log(e);
+//   });
+
+
+
+// Subscribe to data
+
+// const unsubscribe = onValue(ref(database, 'location/city'),
+//   (snapshot) => {
+//     console.log(snapshot.val());
+//   },
+//   (e) => {
+//     console.log('Error in fetching data', e);
+//   }
+// );
+
+// setTimeout(() => {
+//   set(ref(database, 'location/city'), 'New Delhi');
+// }, 3500);
+
+// setTimeout(() => {
+//   set(ref(database, 'location/city'), 'New York');
+// }, 7000);
+
+// setTimeout(() => {
+//   unsubscribe();
+//   set(ref(database, 'location/city'), 'New Bazaar');
+// }, 10500);
