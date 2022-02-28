@@ -113,3 +113,85 @@
 //   unsubscribe();
 //   set(ref(database, 'location/city'), 'New Bazaar');
 // }, 10500);
+
+
+
+// Push data
+
+// push(ref(database, 'notes'), {
+//   title: 'First note',
+//   body: 'This is my first note',
+// });
+
+// push(ref(database, 'notes'), {
+//   title: 'New note',
+//   body: 'This a new note',
+// });
+
+
+
+// Write and get expenses from DB
+
+// expenses.forEach(expense => {
+//   push(ref(database, 'expenses'), expense);
+// });
+
+// get(ref(database, 'expenses'))
+//   .then((snapshot) => {
+//     const expenses = [];
+
+//     snapshot.forEach((childSnapshot) => {
+//       expenses.push({
+//         id: childSnapshot.key,
+//         ...childSnapshot.val(),
+//       });
+//     });
+
+//     console.log(expenses);
+//   });
+
+
+
+// Get expenses from DB using a subscription
+
+// onValue(expensesRef, (snapshot) => {
+//   const expenses = [];
+
+//   snapshot.forEach(childSnapshot => {
+//     expenses.push({
+//       id: childSnapshot.key,
+//       ...childSnapshot.val(),
+//     });
+//   });
+
+//   console.log(expenses);
+// });
+
+
+
+// Child methods
+
+// onChildChanged(expensesRef, (snapshot) => {
+//   console.log(snapshot.val());
+// });
+
+
+
+// Sample expenses
+
+// const expenses = [{
+//   description: 'Bread',
+//   note: 'From Om Store',
+//   amount: '30',
+//   createdAt: 0,
+// },{
+//   description: 'Diary',
+//   note: 'From Mayur Gallery',
+//   amount: '320',
+//   createdAt: 23,
+// },{
+//   description: 'Burger',
+//   note: 'Louis Burgers',
+//   amount: '450',
+//   createdAt: 27,
+// }]
