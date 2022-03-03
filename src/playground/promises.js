@@ -19,11 +19,32 @@ const promise = new Promise((resolve, reject) => {
 
 // Promise chaining
 
+// console.log('before');
+
+// promise.then((data) => {
+//   console.log(data);
+//   return 'yoyoyo';
+// }).then((yo) => {
+//   console.log('msg', yo);
+// }).catch((error) => {
+//   console.log('error:', error);
+// });
+
+// console.log('after');
+
+
+
+// Returning promises
+
 console.log('before');
 
 promise.then((data) => {
   console.log(data);
-  return 'yoyoyo';
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('This is another promise.');
+    }, 1500)
+  });;
 }).then((yo) => {
   console.log('msg', yo);
 }).catch((error) => {
