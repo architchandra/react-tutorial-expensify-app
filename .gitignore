@@ -2,5 +2,6 @@ node_modules
 .DS_Store
 public/dist/
 
-# Temporary omission
-src/firebase
+# Env files
+.env.dev
+.env.test
