@@ -5,17 +5,17 @@ import expenses from '../fixtures/expenses'
 
 
 
-let testExpense, editExpenseSpy, removeExpenseSpy, historySpy, wrapper;
+let testExpense, editExpenseSpy, startRemoveExpenseSpy, historySpy, wrapper;
 beforeEach(() => {
   testExpense = expenses[0];
   editExpenseSpy = jest.fn();
-  removeExpenseSpy = jest.fn();
+  startRemoveExpenseSpy = jest.fn();
   historySpy = { push: jest.fn() };
   wrapper = shallow(
     <EditExpensePage
       expense={expenses[0]}
       editExpense={editExpenseSpy}
-      removeExpense={removeExpenseSpy}
+      startRemoveExpense={startRemoveExpenseSpy}
       history={historySpy}
     />
   );
@@ -35,5 +35,5 @@ test('should edit expense correctly', () => {
 test('should remove expense correctly', () => {
   const testExpenseId = expenses[0].id;
   wrapper.find('button').simulate('click');
-  expect(removeExpenseSpy).toHaveBeenLastCalledWith(testExpenseId);
+  expect(startRemoveExpenseSpy).toHaveBeenLastCalledWith(testExpenseId);
 });
