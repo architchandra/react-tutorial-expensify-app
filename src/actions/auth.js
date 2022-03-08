@@ -1,4 +1,4 @@
-import { signInWithPopup } from 'firebase/auth';
+import { signInWithPopup, signOut } from 'firebase/auth';
 import { auth, googleAuthProvider } from '../firebase/firebase';
 
 
@@ -9,6 +9,12 @@ const startLogin = () => {
   };
 };
 
+const startLogout = () => {
+  return () => {
+    return signOut(auth);
+  };
+};
 
 
-export { startLogin };
+
+export { startLogin, startLogout };
