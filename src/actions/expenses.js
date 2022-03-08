@@ -1,6 +1,6 @@
 import uuid from 'uuid';
 import { ref, push, get, remove, update } from 'firebase/database';
-import database from '../firebase/firebase';
+import { database } from '../firebase/firebase';
 
 
 

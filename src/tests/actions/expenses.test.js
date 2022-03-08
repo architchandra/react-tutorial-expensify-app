@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import { get, set, ref } from 'firebase/database';
 import { startAddExpense, addExpense, startEditExpense, editExpense, startRemoveExpense, removeExpense, setExpenses, startSetExpenses } from '../../actions/expenses';
 import expenses from '../fixtures/expenses';
-import database from '../../firebase/firebase';
+import { database } from '../../firebase/firebase';
 
 
 

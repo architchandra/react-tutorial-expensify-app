@@ -1,4 +1,4 @@
-import * as firebase from 'firebase/app';
+import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, get, set, remove, update, onValue, push, onChildChanged } from 'firebase/database';
 
 
@@ -12,13 +12,9 @@ const config = {
   messagingSenderId:  process.env.FIREBASE_MESSAGING_SENDER_ID,
   appId:  process.env.FIREBASE_APP_ID,
 };
-firebase.initializeApp(config);
+const firebaseApp = initializeApp(config);
+const database = getDatabase(firebaseApp);
 
 
 
-const database = getDatabase();
-const expensesRef = ref(database, 'expenses');
-
-
-
-export { expensesRef, database as default };
+export { database };
