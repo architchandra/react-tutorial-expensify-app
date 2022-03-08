@@ -21,16 +21,25 @@ const jsx = (
     <AppRouter />
   </Provider>
 );
+let hasRendered = false;
+const renderApp = () => {
+  if (!hasRendered) {
+    ReactDOM.render(jsx, document.getElementById('app'));
+  }
+};
 
 ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    console.log('logged in');
+    store.dispatch(startSetExpenses()).then(() => {
+      renderApp();
+      if (history.location.pathname === '/') {
+        history.push('/dashboard');
+      }
+    });
   } else {
+    renderApp();
     history.push('/');
   }
-});
-
-store.dispatch(startSetExpenses()).then(() => {
-  ReactDOM.render(jsx, document.getElementById('app'));
 });
