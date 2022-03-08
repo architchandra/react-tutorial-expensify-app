@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { onAuthStateChanged } from 'firebase/auth';
-import AppRouter from './routers/AppRouter';
+import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { startSetExpenses } from './actions/expenses';
 import { auth } from './firebase/firebase';
@@ -27,7 +27,7 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log('logged in');
   } else {
-    console.log('logged out');
+    history.push('/');
   }
 });
 
