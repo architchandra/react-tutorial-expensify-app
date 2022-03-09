@@ -10,7 +10,7 @@ const Header = (props) => (
     <h1>Expensify</h1>
     <ul>
       <li>
-        <NavLink to="/" activeClassName="navitem-active" exact={ true }>Dashboard</NavLink>
+        <NavLink to="/dashboard" activeClassName="navitem-active" exact={ true }>Dashboard</NavLink>
       </li>
       <li>
         <NavLink to="/create" activeClassName="navitem-active">Create</NavLink>
