@@ -11,7 +11,7 @@ exports[`should render Header correctly 1`] = `
         activeClassName="navitem-active"
         ariaCurrent="true"
         exact={true}
-        to="/"
+        to="/dashboard"
       >
         Dashboard
       </NavLink>
