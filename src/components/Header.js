@@ -6,15 +6,19 @@ import { startLogout } from '../actions/auth';
 
 
 const Header = (props) => (
-  <header>
-    <Link to="/dashboard" exact={ true }>
-      <h1>
-        Expensify
-      </h1>
-    </Link>
-    <button onClick={props.startLogout}>
-      Logout
-    </button>
+  <header className="header">
+    <div className="content-container">
+      <div className="header__content">
+        <Link className="header__title" to="/dashboard" exact={ true }>
+          <h1>
+            Expensify
+          </h1>
+        </Link>
+        <button onClick={props.startLogout}>
+          Logout
+        </button>
+      </div>
+    </div>
   </header>
 );
 
