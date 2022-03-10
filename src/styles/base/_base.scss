@@ -3,9 +3,10 @@ html {
 }
 
 body {
-  background: white;
+  background: $dark-grey;
   font-family: Helvetica, Aria, sans-serif;
   font-size: $m-size;
+  line-height: 1.6;
 }
 
 button {
