@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogout } from '../actions/auth';
 
@@ -7,20 +7,14 @@ import { startLogout } from '../actions/auth';
 
 const Header = (props) => (
   <header>
-    <h1>Expensify</h1>
-    <ul>
-      <li>
-        <NavLink to="/dashboard" activeClassName="navitem-active" exact={ true }>Dashboard</NavLink>
-      </li>
-      <li>
-        <NavLink to="/create" activeClassName="navitem-active">Create</NavLink>
-      </li>
-      <li>
-        <button onClick={props.startLogout}>
-          Logout
-        </button>
-      </li>
-    </ul>
+    <Link to="/dashboard" exact={ true }>
+      <h1>
+        Expensify
+      </h1>
+    </Link>
+    <button onClick={props.startLogout}>
+      Logout
+    </button>
   </header>
 );
 
