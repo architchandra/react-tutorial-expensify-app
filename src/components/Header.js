@@ -14,7 +14,7 @@ const Header = (props) => (
             Expensify
           </h1>
         </Link>
-        <button onClick={props.startLogout}>
+        <button className="button button--link" onClick={props.startLogout}>
           Logout
         </button>
       </div>
