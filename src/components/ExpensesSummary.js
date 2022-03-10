@@ -14,13 +14,9 @@ const ExpensesSummary = (props) => {
   return (
     <div className="page-header">
       <div className="content-container">
-        {
-          hasExpenses
-            ? <h2 className="page-header__title">
-                <span>{props.expenses.length + (hasOnlyOneExpense ? ' expense' : ' expenses')}</span> found, totalling <span>{numeral(getExpensesTotal(props.expenses)).format('$0,0.00')}</span>.
-              </h2>
-            : ''
-        }
+        <h2 className="page-header__title">
+          <span>{props.expenses.length + (hasOnlyOneExpense ? ' expense' : ' expenses')}</span> found, totalling <span>{numeral(getExpensesTotal(props.expenses)).format('$0,0.00')}</span>.
+        </h2>
         <div className="page-header__actions">
           <Link className="button" to="/create">
             Add Expense
