@@ -1,21 +1,103 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should NOT render if no expenses present 1`] = `""`;
+exports[`should NOT render if no expenses present 1`] = `
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h2
+      className="page-header__title"
+    >
+      <span>
+        0 expenses
+      </span>
+       found, totalling 
+      <span>
+        $0.00
+      </span>
+      .
+    </h2>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        replace={false}
+        to="/create"
+      >
+        Add Expense
+      </Link>
+    </div>
+  </div>
+</div>
+`;
 
 exports[`should render plural copy when multiple expenses present 1`] = `
-<p>
-  3 expenses
-   found, totalling 
-  $520.00
-  .
-</p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h2
+      className="page-header__title"
+    >
+      <span>
+        3 expenses
+      </span>
+       found, totalling 
+      <span>
+        $520.00
+      </span>
+      .
+    </h2>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        replace={false}
+        to="/create"
+      >
+        Add Expense
+      </Link>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`should render singular copy when ONLY one expense present 1`] = `
-<p>
-  1 expense
-   found, totalling 
-  $195.00
-  .
-</p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h2
+      className="page-header__title"
+    >
+      <span>
+        1 expense
+      </span>
+       found, totalling 
+      <span>
+        $195.00
+      </span>
+      .
+    </h2>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        replace={false}
+        to="/create"
+      >
+        Add Expense
+      </Link>
+    </div>
+  </div>
+</div>
 `;
